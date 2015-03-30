@@ -43,8 +43,6 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (void)Refreshing{
     NSLog(@"下拉刷新");
-    
-    
     sleep(2);
     
     [self headerEndRefreshing];

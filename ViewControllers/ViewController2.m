@@ -11,6 +11,7 @@
 #import "NSObject+block.h"
 #import "REGlobalClass.h"
 #import "UIViewExt.h"
+#import "ASyncURLConnection.h"
 
 @implementation ViewController2
 
@@ -42,6 +43,25 @@
         //[weakSelf fitInSize];
     }];
     [self.view addSubview:view];
+}
+
+- (void)downloadImage{
+    NSString *url = @"http://images.apple.com/jp/iphone/features/includes/camera-gallery/03-20100607.jpg";
+    [ASyncURLConnection request:url completeBlock:^(NSData *date) {
+        dispatch_queue_t queue = dispatch_queue_create(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        dispatch_async(queue, ^{
+            /**
+             *  对返回的数据处理 不妨碍主线程 可以长时间处理
+             */
+            dispatch_async(dispatch_get_main_queue(), ^{
+                /**
+                 *  对用户界面进行反应处理
+                 */
+            });
+        });
+    } errorBlock:^(NSError *error) {
+        DLog(@"%@",error);
+    }];
 }
 
 - (void)move{
