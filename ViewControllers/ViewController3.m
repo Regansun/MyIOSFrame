@@ -7,12 +7,17 @@
 //
 
 #import "ViewController3.h"
-#import "REGlobalClass.h"
+
+@interface ViewController3 ()
+
+@end
 
 @implementation ViewController3
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    
 }
 
 @end

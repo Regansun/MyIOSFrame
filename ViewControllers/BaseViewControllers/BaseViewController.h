@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "REGlobalClass.h"
 
 @interface BaseViewController : UIViewController
 

@@ -1,54 +1,44 @@
 //
-//  REMainViewController.m
+//  AnimationViewController.m
 //  MyIOSFrame
 //
-//  Created by Regan on 15/3/26.
+//  Created by Regan on 15/3/31.
 //  Copyright (c) 2015年 Regan. All rights reserved.
 //
 
-#import "REMainViewController.h"
-#import "REGlobalClass.h"
-#import "UITableViewController+pull.h"
-#import "MasonryViewController.h"
-#import "CircleViewController.h"
 #import "AnimationViewController.h"
+#import "LoginViewController.h"
 
-static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
+static NSString *const TableViewCellId = @"TableViewCellId";
 
-@interface REMainViewController ()
+@interface AnimationViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray *tableArray;
 
 @end
 
-@implementation REMainViewController
+@implementation AnimationViewController
 
 - (NSMutableArray *)tableArray{
     if (!_tableArray) {
-        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"runtime学习",@"无限循环图片轮播器",@"动画学习"] mutableCopy];
+        _tableArray = [@[@"登录验证表单(基本使用)",@"Layer中自定义属性的动画",@"自定义ViewController容器转场",@"CollectionView动画"] mutableCopy];
     }
     return _tableArray;
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self setTitle:@"微 信"];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
+    [self setTitle:@"动画效果"];
     
-//    WEAKSELF
-//    [self addHeadViewPull:^(UITableViewController *tablewVC) {
-//        [weakSelf Refreshing];
-//    }];
-    //[self headerBeginRefreshing];
-}
-
-- (void)Refreshing{
-    NSLog(@"下拉刷新");
-    sleep(2);
+    UITableView *tableView = [[UITableView alloc] init];
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellId];
+    [tableView setDelegate:self];
+    [tableView setDataSource:self];
+    [self.view addSubview:tableView];
     
-    [self headerEndRefreshing];
-    NSLog(@"结束刷新");
+    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(64, 0, 0, 0));
+    }];
 }
 
 #pragma mark - UITableViewDataSource
@@ -61,33 +51,31 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellId forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell.textLabel setText:[self.tableArray objectAtIndex:indexPath.row]];
-    //cell.textLabel.numberOfLines = 0;
     cell.textLabel.adjustsFontSizeToFitWidth = YES;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //[self headerBeginRefreshing];
     UIViewController *viewCov = nil;
     switch (indexPath.row) {
         case 0:
-            viewCov = [[MasonryViewController alloc] init];
+            viewCov = [[LoginViewController alloc] init];
             break;
         case 1:
             
             break;
         case 2:
-            viewCov = [[CircleViewController alloc] init];
+            //viewCov = [[CircleViewController alloc] init];
             break;
         case 3:
-            viewCov = [[AnimationViewController alloc] init];
+            //viewCov = [[AnimationViewController alloc] init];
             break;
             
         default:
@@ -95,5 +83,6 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
     }
     [self.navigationController pushViewController:viewCov animated:YES];
 }
+
 
 @end

@@ -16,8 +16,7 @@
 #define TabBarHeight  49.0
 #define KMainScreenWidth ([UIScreen mainScreen].bounds.size.width)
 #define KMainScreenHeight ([UIScreen mainScreen].bounds.size.height)
-
-
+#define kWidthScale KMainScreenWidth/320.0
 
 //----------------------系统----------------------------
 //获取系统版本
