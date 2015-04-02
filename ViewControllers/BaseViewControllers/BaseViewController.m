@@ -14,6 +14,9 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.automaticallyAdjustsScrollViewInsets= NO;
+    //[self.navigationController.navigationBar.layer setMasksToBounds:YES];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 }
 
 @end
+

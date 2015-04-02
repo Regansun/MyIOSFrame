@@ -93,6 +93,7 @@
 		599C0B5F1AC3F1CA00F8DFEE /* REMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 599C0B5E1AC3F1CA00F8DFEE /* REMainViewController.m */; };
 		599C0B621AC3F4AB00F8DFEE /* UITableViewController+pull.m in Sources */ = {isa = PBXBuildFile; fileRef = 599C0B611AC3F4AB00F8DFEE /* UITableViewController+pull.m */; };
 		599C0B651AC3FD2100F8DFEE /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 599C0B641AC3FD2100F8DFEE /* UIViewExt.m */; };
+		59D884531ACBD78A0037EE49 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D884521ACBD78A0037EE49 /* CustomViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,6 +287,8 @@
 		599C0B611AC3F4AB00F8DFEE /* UITableViewController+pull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+pull.m"; sourceTree = "<group>"; };
 		599C0B631AC3FD2100F8DFEE /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		599C0B641AC3FD2100F8DFEE /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		59D884511ACBD78A0037EE49 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		59D884521ACBD78A0037EE49 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,6 +702,7 @@
 		5989673A1AC279340069E98A /* viewControlers */ = {
 			isa = PBXGroup;
 			children = (
+				59D884501ACBD7670037EE49 /* CustomView */,
 				597A12281ACA80F400A345DB /* 动画 */,
 				597A11F61ACA389900A345DB /* 无限循环图片轮播器  */,
 				598831391AC52726000ED39C /* Masonry实践 */,
@@ -714,6 +718,15 @@
 				598967451AC279960069E98A /* ViewController4.m */,
 			);
 			name = viewControlers;
+			sourceTree = "<group>";
+		};
+		59D884501ACBD7670037EE49 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				59D884511ACBD78A0037EE49 /* CustomViewController.h */,
+				59D884521ACBD78A0037EE49 /* CustomViewController.m */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -844,6 +857,7 @@
 				597C3A9E1AC164E700D0EECB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				597C3A6B1AC10C5500D0EECB /* AFHTTPSessionManager.m in Sources */,
 				599C0B5F1AC3F1CA00F8DFEE /* REMainViewController.m in Sources */,
+				59D884531ACBD78A0037EE49 /* CustomViewController.m in Sources */,
 				597A11E61ACA335100A345DB /* UIView+SDExtension.m in Sources */,
 				597C3A9F1AC164E700D0EECB /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				597C3AA31AC164E700D0EECB /* UIProgressView+AFNetworking.m in Sources */,

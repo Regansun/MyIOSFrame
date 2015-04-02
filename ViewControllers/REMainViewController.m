@@ -12,6 +12,7 @@
 #import "MasonryViewController.h"
 #import "CircleViewController.h"
 #import "AnimationViewController.h"
+#import "CustomViewController.h"
 
 static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
@@ -25,7 +26,7 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (NSMutableArray *)tableArray{
     if (!_tableArray) {
-        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"runtime学习",@"无限循环图片轮播器",@"动画学习"] mutableCopy];
+        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"runtime学习",@"无限循环图片轮播器",@"动画学习",@"子视图切换"] mutableCopy];
     }
     return _tableArray;
 }
@@ -89,10 +90,14 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
         case 3:
             viewCov = [[AnimationViewController alloc] init];
             break;
+        case 4:
+            viewCov = [[CustomViewController alloc] init];
+            break;
             
         default:
             break;
     }
+    //[self.navigationController addChildViewController:viewCov];
     [self.navigationController pushViewController:viewCov animated:YES];
 }
 

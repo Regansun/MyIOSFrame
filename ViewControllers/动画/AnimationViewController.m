@@ -21,7 +21,7 @@ static NSString *const TableViewCellId = @"TableViewCellId";
 
 - (NSMutableArray *)tableArray{
     if (!_tableArray) {
-        _tableArray = [@[@"登录验证表单(基本使用)",@"Layer中自定义属性的动画",@"自定义ViewController容器转场",@"CollectionView动画"] mutableCopy];
+        _tableArray = [@[@"登录验证表单(基本使用)"] mutableCopy];
     }
     return _tableArray;
 }

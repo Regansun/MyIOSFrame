@@ -14,6 +14,7 @@
     [super viewDidLoad];
     
     [self setTitle:@"我的"];
+    [self.view setBackgroundColor:[UIColor greenColor]];
 }
 
 @end
