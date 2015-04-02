@@ -94,6 +94,13 @@
 		599C0B621AC3F4AB00F8DFEE /* UITableViewController+pull.m in Sources */ = {isa = PBXBuildFile; fileRef = 599C0B611AC3F4AB00F8DFEE /* UITableViewController+pull.m */; };
 		599C0B651AC3FD2100F8DFEE /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 599C0B641AC3FD2100F8DFEE /* UIViewExt.m */; };
 		59D884531ACBD78A0037EE49 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D884521ACBD78A0037EE49 /* CustomViewController.m */; };
+		59E74A541ACD2F83004B2A8E /* REMessageTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A531ACD2F83004B2A8E /* REMessageTableController.m */; };
+		59E74A5A1ACD3355004B2A8E /* BaseMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A591ACD3355004B2A8E /* BaseMessageCell.m */; };
+		59E74A5D1ACD348A004B2A8E /* REMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A5C1ACD348A004B2A8E /* REMessageTableViewCell.m */; };
+		59E74A601ACD3680004B2A8E /* REMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A5F1ACD3680004B2A8E /* REMessageModel.m */; };
+		59E74A641ACD3778004B2A8E /* TextMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A631ACD3778004B2A8E /* TextMessageBubbleView.m */; };
+		59E74A671ACD37BE004B2A8E /* BaseBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A661ACD37BE004B2A8E /* BaseBubbleView.m */; };
+		59E74A6B1ACD3A29004B2A8E /* REMessageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E74A6A1ACD3A29004B2A8E /* REMessageHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +296,20 @@
 		599C0B641AC3FD2100F8DFEE /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		59D884511ACBD78A0037EE49 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		59D884521ACBD78A0037EE49 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		59E74A521ACD2F83004B2A8E /* REMessageTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMessageTableController.h; sourceTree = "<group>"; };
+		59E74A531ACD2F83004B2A8E /* REMessageTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMessageTableController.m; sourceTree = "<group>"; };
+		59E74A581ACD3355004B2A8E /* BaseMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseMessageCell.h; sourceTree = "<group>"; };
+		59E74A591ACD3355004B2A8E /* BaseMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseMessageCell.m; sourceTree = "<group>"; };
+		59E74A5B1ACD348A004B2A8E /* REMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMessageTableViewCell.h; sourceTree = "<group>"; };
+		59E74A5C1ACD348A004B2A8E /* REMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMessageTableViewCell.m; sourceTree = "<group>"; };
+		59E74A5E1ACD3680004B2A8E /* REMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMessageModel.h; sourceTree = "<group>"; };
+		59E74A5F1ACD3680004B2A8E /* REMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMessageModel.m; sourceTree = "<group>"; };
+		59E74A621ACD3778004B2A8E /* TextMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextMessageBubbleView.h; sourceTree = "<group>"; };
+		59E74A631ACD3778004B2A8E /* TextMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextMessageBubbleView.m; sourceTree = "<group>"; };
+		59E74A651ACD37BE004B2A8E /* BaseBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseBubbleView.h; sourceTree = "<group>"; };
+		59E74A661ACD37BE004B2A8E /* BaseBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBubbleView.m; sourceTree = "<group>"; };
+		59E74A691ACD3A29004B2A8E /* REMessageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMessageHelper.h; sourceTree = "<group>"; };
+		59E74A6A1ACD3A29004B2A8E /* REMessageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMessageHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,6 +510,7 @@
 		597C3A121AC105A300D0EECB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				59E74A501ACD2D90004B2A8E /* REMessageKit */,
 				5989673A1AC279340069E98A /* viewControlers */,
 				597C3A131AC105BA00D0EECB /* BaseViewControllers */,
 			);
@@ -729,6 +751,75 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		59E74A501ACD2D90004B2A8E /* REMessageKit */ = {
+			isa = PBXGroup;
+			children = (
+				59E74A521ACD2F83004B2A8E /* REMessageTableController.h */,
+				59E74A531ACD2F83004B2A8E /* REMessageTableController.m */,
+				59E74A681ACD3A01004B2A8E /* REMessageHelper */,
+				59E74A561ACD32ED004B2A8E /* messageUI */,
+				59E74A551ACD32C9004B2A8E /* messageModel */,
+				59E74A511ACD2E12004B2A8E /* images */,
+			);
+			path = REMessageKit;
+			sourceTree = "<group>";
+		};
+		59E74A511ACD2E12004B2A8E /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		59E74A551ACD32C9004B2A8E /* messageModel */ = {
+			isa = PBXGroup;
+			children = (
+				59E74A5E1ACD3680004B2A8E /* REMessageModel.h */,
+				59E74A5F1ACD3680004B2A8E /* REMessageModel.m */,
+			);
+			path = messageModel;
+			sourceTree = "<group>";
+		};
+		59E74A561ACD32ED004B2A8E /* messageUI */ = {
+			isa = PBXGroup;
+			children = (
+				59E74A611ACD3722004B2A8E /* REMessageBubbleView */,
+				59E74A571ACD32FD004B2A8E /* messageCells */,
+			);
+			path = messageUI;
+			sourceTree = "<group>";
+		};
+		59E74A571ACD32FD004B2A8E /* messageCells */ = {
+			isa = PBXGroup;
+			children = (
+				59E74A581ACD3355004B2A8E /* BaseMessageCell.h */,
+				59E74A591ACD3355004B2A8E /* BaseMessageCell.m */,
+				59E74A5B1ACD348A004B2A8E /* REMessageTableViewCell.h */,
+				59E74A5C1ACD348A004B2A8E /* REMessageTableViewCell.m */,
+			);
+			path = messageCells;
+			sourceTree = "<group>";
+		};
+		59E74A611ACD3722004B2A8E /* REMessageBubbleView */ = {
+			isa = PBXGroup;
+			children = (
+				59E74A651ACD37BE004B2A8E /* BaseBubbleView.h */,
+				59E74A661ACD37BE004B2A8E /* BaseBubbleView.m */,
+				59E74A621ACD3778004B2A8E /* TextMessageBubbleView.h */,
+				59E74A631ACD3778004B2A8E /* TextMessageBubbleView.m */,
+			);
+			path = REMessageBubbleView;
+			sourceTree = "<group>";
+		};
+		59E74A681ACD3A01004B2A8E /* REMessageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				59E74A691ACD3A29004B2A8E /* REMessageHelper.h */,
+				59E74A6A1ACD3A29004B2A8E /* REMessageHelper.m */,
+			);
+			path = REMessageHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -845,6 +936,7 @@
 				597C3A881AC1214900D0EECB /* UIImage+Category.m in Sources */,
 				597C3A4E1AC109CC00D0EECB /* UIButton+WebCache.m in Sources */,
 				598831381AC51B79000ED39C /* MMPlaceHolder.m in Sources */,
+				59E74A541ACD2F83004B2A8E /* REMessageTableController.m in Sources */,
 				597C3A4B1AC109CC00D0EECB /* SDWebImageDownloaderOperation.m in Sources */,
 				598967431AC279860069E98A /* ViewController3.m in Sources */,
 				597C3AA21AC164E700D0EECB /* UIImageView+AFNetworking.m in Sources */,
@@ -854,6 +946,7 @@
 				597C3A471AC109CC00D0EECB /* SDImageCache.m in Sources */,
 				599C0B651AC3FD2100F8DFEE /* UIViewExt.m in Sources */,
 				598831281AC503E6000ED39C /* MASConstraintMaker.m in Sources */,
+				59E74A5A1ACD3355004B2A8E /* BaseMessageCell.m in Sources */,
 				597C3A9E1AC164E700D0EECB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				597C3A6B1AC10C5500D0EECB /* AFHTTPSessionManager.m in Sources */,
 				599C0B5F1AC3F1CA00F8DFEE /* REMainViewController.m in Sources */,
@@ -865,11 +958,13 @@
 				597C3A701AC10C5500D0EECB /* AFURLResponseSerialization.m in Sources */,
 				597A11E51ACA335100A345DB /* SDCollectionViewCell.m in Sources */,
 				597A11F91ACA38F900A345DB /* CircleViewController.m in Sources */,
+				59E74A5D1ACD348A004B2A8E /* REMessageTableViewCell.m in Sources */,
 				5989673D1AC2796B0069E98A /* ViewController1.m in Sources */,
 				597A11E71ACA335100A345DB /* SDCycleScrollView.m in Sources */,
 				597C3A8B1AC12CCB00D0EECB /* RENetWorkHelper.m in Sources */,
 				5988312A1AC503E6000ED39C /* MASViewAttribute.m in Sources */,
 				597C3A851AC114BB00D0EECB /* UIImageView+Category.m in Sources */,
+				59E74A671ACD37BE004B2A8E /* BaseBubbleView.m in Sources */,
 				599C0B5C1AC3EDFA00F8DFEE /* NSObject+block.m in Sources */,
 				597C3AA51AC164E700D0EECB /* UIWebView+AFNetworking.m in Sources */,
 				597C3A691AC10C5500D0EECB /* AFHTTPRequestOperation.m in Sources */,
@@ -877,6 +972,7 @@
 				597C3A6F1AC10C5500D0EECB /* AFURLRequestSerialization.m in Sources */,
 				597A122C1ACA812500A345DB /* AnimationViewController.m in Sources */,
 				597A11F21ACA336600A345DB /* TAAnimatedDotView.m in Sources */,
+				59E74A6B1ACD3A29004B2A8E /* REMessageHelper.m in Sources */,
 				597C39D81AC0FF1D00D0EECB /* AppDelegate.m in Sources */,
 				5988312C1AC503E6000ED39C /* NSArray+MASAdditions.m in Sources */,
 				597C3A491AC109CC00D0EECB /* SDWebImageDecoder.m in Sources */,
@@ -885,6 +981,7 @@
 				597C3A521AC109CC00D0EECB /* UIImageView+HighlightedWebCache.m in Sources */,
 				597C39D51AC0FF1D00D0EECB /* main.m in Sources */,
 				597C3A4A1AC109CC00D0EECB /* SDWebImageDownloader.m in Sources */,
+				59E74A641ACD3778004B2A8E /* TextMessageBubbleView.m in Sources */,
 				598967461AC279960069E98A /* ViewController4.m in Sources */,
 				597A11F41ACA336600A345DB /* TAPageControl.m in Sources */,
 				597C3A481AC109CC00D0EECB /* SDWebImageCompat.m in Sources */,
@@ -907,6 +1004,7 @@
 				597C3AA01AC164E700D0EECB /* UIAlertView+AFNetworking.m in Sources */,
 				598831341AC504F8000ED39C /* UIView+Masonry_ZLJ.m in Sources */,
 				597C3A541AC109CC00D0EECB /* UIView+WebCacheOperation.m in Sources */,
+				59E74A601ACD3680004B2A8E /* REMessageModel.m in Sources */,
 				597C3A4C1AC109CC00D0EECB /* SDWebImageManager.m in Sources */,
 				597C3A0B1AC102C700D0EECB /* TableCell.m in Sources */,
 				597C3A6D1AC10C5500D0EECB /* AFSecurityPolicy.m in Sources */,

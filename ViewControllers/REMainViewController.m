@@ -13,6 +13,7 @@
 #import "CircleViewController.h"
 #import "AnimationViewController.h"
 #import "CustomViewController.h"
+#import "REMessageTableController.h"
 
 static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
@@ -26,7 +27,7 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (NSMutableArray *)tableArray{
     if (!_tableArray) {
-        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"runtime学习",@"无限循环图片轮播器",@"动画学习",@"子视图切换"] mutableCopy];
+        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"runtime学习",@"无限循环图片轮播器",@"动画学习",@"子视图切换",@"聊天界面实现"] mutableCopy];
     }
     return _tableArray;
 }
@@ -92,6 +93,9 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
             break;
         case 4:
             viewCov = [[CustomViewController alloc] init];
+            break;
+        case 5:
+            viewCov = [[REMessageTableController alloc] init];
             break;
             
         default:
