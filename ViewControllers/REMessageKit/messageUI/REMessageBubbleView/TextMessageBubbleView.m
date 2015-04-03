@@ -14,6 +14,7 @@
     if (!_textLable) {
         _textLable = [[UILabel alloc] init];
         _textLable.numberOfLines = 0;
+        [_textLable setFont:[UIFont systemFontOfSize:14.0]];
         [self addSubview:_textLable];
     }
     return _textLable;
@@ -26,9 +27,13 @@
     }];
 }
 
-- (void)showInfo:(REMessageModel *)model{
-    [self.textLable setText:@"123"];
+- (void)showInfo:(id<REMessage>)model{
+    [self.textLable setText:model.text];
     [self layoutSubviews];
+}
+
++ (CGFloat)calculateCellHeightWithMessage:(id<REMessage>)message{
+    return 2.0;
 }
 
 @end

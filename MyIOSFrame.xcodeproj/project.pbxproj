@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		596F47F31AC9149200F069EF /* ASyncURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 596F47F21AC9149200F069EF /* ASyncURLConnection.m */; };
+		597899E01ACE714700BB1257 /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597899DE1ACE714700BB1257 /* weChatBubble_Sending_Solid@2x.png */; };
+		597899E11ACE714700BB1257 /* weChatBubble_Receiving_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597899DF1ACE714700BB1257 /* weChatBubble_Receiving_Solid@2x.png */; };
+		597899E41ACE7A0100BB1257 /* weChatBubble_Sending@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597899E21ACE7A0100BB1257 /* weChatBubble_Sending@2x.png */; };
+		597899E51ACE7A0100BB1257 /* weChatBubble_Receiving@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597899E31ACE7A0100BB1257 /* weChatBubble_Receiving@2x.png */; };
+		597899E81ACE840A00BB1257 /* REMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597899E71ACE840A00BB1257 /* REMessageBubbleView.m */; };
+		597899EA1ACE8EF900BB1257 /* allClassIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 597899E91ACE8EF900BB1257 /* allClassIcon@2x.png */; };
 		597A11E51ACA335100A345DB /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 597A11E01ACA335100A345DB /* SDCollectionViewCell.m */; };
 		597A11E61ACA335100A345DB /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 597A11E21ACA335100A345DB /* UIView+SDExtension.m */; };
 		597A11E71ACA335100A345DB /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597A11E41ACA335100A345DB /* SDCycleScrollView.m */; };
@@ -116,6 +122,14 @@
 /* Begin PBXFileReference section */
 		596F47F11AC9149200F069EF /* ASyncURLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASyncURLConnection.h; sourceTree = "<group>"; };
 		596F47F21AC9149200F069EF /* ASyncURLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASyncURLConnection.m; sourceTree = "<group>"; };
+		597899DD1ACE3AE600BB1257 /* REMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMessage.h; sourceTree = "<group>"; };
+		597899DE1ACE714700BB1257 /* weChatBubble_Sending_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Solid@2x.png"; sourceTree = "<group>"; };
+		597899DF1ACE714700BB1257 /* weChatBubble_Receiving_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Receiving_Solid@2x.png"; sourceTree = "<group>"; };
+		597899E21ACE7A0100BB1257 /* weChatBubble_Sending@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending@2x.png"; sourceTree = "<group>"; };
+		597899E31ACE7A0100BB1257 /* weChatBubble_Receiving@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Receiving@2x.png"; sourceTree = "<group>"; };
+		597899E61ACE840A00BB1257 /* REMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REMessageBubbleView.h; sourceTree = "<group>"; };
+		597899E71ACE840A00BB1257 /* REMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REMessageBubbleView.m; sourceTree = "<group>"; };
+		597899E91ACE8EF900BB1257 /* allClassIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allClassIcon@2x.png"; sourceTree = "<group>"; };
 		597A11DF1ACA335100A345DB /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
 		597A11E01ACA335100A345DB /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
 		597A11E11ACA335100A345DB /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
@@ -767,6 +781,11 @@
 		59E74A511ACD2E12004B2A8E /* images */ = {
 			isa = PBXGroup;
 			children = (
+				597899E91ACE8EF900BB1257 /* allClassIcon@2x.png */,
+				597899DE1ACE714700BB1257 /* weChatBubble_Sending_Solid@2x.png */,
+				597899E21ACE7A0100BB1257 /* weChatBubble_Sending@2x.png */,
+				597899E31ACE7A0100BB1257 /* weChatBubble_Receiving@2x.png */,
+				597899DF1ACE714700BB1257 /* weChatBubble_Receiving_Solid@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -774,6 +793,7 @@
 		59E74A551ACD32C9004B2A8E /* messageModel */ = {
 			isa = PBXGroup;
 			children = (
+				597899DD1ACE3AE600BB1257 /* REMessage.h */,
 				59E74A5E1ACD3680004B2A8E /* REMessageModel.h */,
 				59E74A5F1ACD3680004B2A8E /* REMessageModel.m */,
 			);
@@ -803,6 +823,8 @@
 		59E74A611ACD3722004B2A8E /* REMessageBubbleView */ = {
 			isa = PBXGroup;
 			children = (
+				597899E61ACE840A00BB1257 /* REMessageBubbleView.h */,
+				597899E71ACE840A00BB1257 /* REMessageBubbleView.m */,
 				59E74A651ACD37BE004B2A8E /* BaseBubbleView.h */,
 				59E74A661ACD37BE004B2A8E /* BaseBubbleView.m */,
 				59E74A621ACD3778004B2A8E /* TextMessageBubbleView.h */,
@@ -900,7 +922,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597899EA1ACE8EF900BB1257 /* allClassIcon@2x.png in Resources */,
 				597C39E11AC0FF1D00D0EECB /* Main.storyboard in Resources */,
+				597899E11ACE714700BB1257 /* weChatBubble_Receiving_Solid@2x.png in Resources */,
+				597899E01ACE714700BB1257 /* weChatBubble_Sending_Solid@2x.png in Resources */,
+				597899E41ACE7A0100BB1257 /* weChatBubble_Sending@2x.png in Resources */,
+				597899E51ACE7A0100BB1257 /* weChatBubble_Receiving@2x.png in Resources */,
 				597C39E61AC0FF1D00D0EECB /* LaunchScreen.xib in Resources */,
 				597C39E31AC0FF1D00D0EECB /* Images.xcassets in Resources */,
 			);
@@ -935,6 +962,7 @@
 				597C3A031AC1010300D0EECB /* REButton.m in Sources */,
 				597C3A881AC1214900D0EECB /* UIImage+Category.m in Sources */,
 				597C3A4E1AC109CC00D0EECB /* UIButton+WebCache.m in Sources */,
+				597899E81ACE840A00BB1257 /* REMessageBubbleView.m in Sources */,
 				598831381AC51B79000ED39C /* MMPlaceHolder.m in Sources */,
 				59E74A541ACD2F83004B2A8E /* REMessageTableController.m in Sources */,
 				597C3A4B1AC109CC00D0EECB /* SDWebImageDownloaderOperation.m in Sources */,
