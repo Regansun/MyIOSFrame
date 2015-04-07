@@ -18,9 +18,9 @@
 
 @property (nonatomic, assign) BOOL displayTimestamp; //是否显示时间轴
 
-@property (nonatomic, strong) REMessageBubbleView *bubbleView;  //消息内容视图
+@property (nonatomic, weak) REMessageBubbleView *bubbleView;  //消息内容视图
 
-@property (nonatomic, strong) id<REMessage> message; //消息对象
+@property (nonatomic, weak) id<REMessage> message; //消息对象
 
 @property (strong, nonatomic) NSIndexPath *indexPath; //Cell所在的位置
 
@@ -56,5 +56,7 @@
  *  @return 返回Cell所需要的高度
  */
 + (CGFloat)calculateCellHeightWithMessage:(id <REMessage>)message displaysTimestamp:(BOOL)displayTimestamp;
+
+//- (void)setSelectedBackgroundColor:(UIColor*)color UI_APPEARANCE_SELECTOR;
 
 @end

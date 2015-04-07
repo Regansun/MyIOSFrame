@@ -19,8 +19,8 @@ static const CGFloat kAvatarImageSize = 40.0f;       //头像大小
 + (CGFloat)calculateCellHeightWithMessage:(id <REMessage>)message displaysTimestamp:(BOOL)displayTimestamp{
     CGFloat timestampHeight = displayTimestamp ? (kTimeStampLabelHeight + kLabelPadding) : kLabelPadding;
     //CGFloat avatorHeight = kAvatarImageSize;
-    CGFloat bubbleHeight = [REMessageBubbleView calculateCellHeightWithMessage:message];
-    return timestampHeight+bubbleHeight+kLabelPadding;
+    CGSize bubbleSize = [REMessageBubbleView calculateCellHeightWithMessage:message];
+    return timestampHeight+bubbleSize.height+kLabelPadding;
 }
 
 - (instancetype)initWithMessage:(id<REMessage>)message displaysTimestamp:(BOOL)displayTimestamp reuseIdentifier:(NSString *)cellIdentifier{
@@ -43,6 +43,10 @@ static const CGFloat kAvatarImageSize = 40.0f;       //头像大小
         self.avatorImage = avatorImage;
         
         //配置需要显示什么消息内容，比如语音、文字、视频、图片
+        REMessageBubbleView *bubbleView = [[REMessageBubbleView alloc] initWithMessage:message];
+        //[[bubbleView textLable] setFont:<#(UIFont *)#>]
+        [self.contentView addSubview:bubbleView];
+        self.bubbleView = bubbleView;
         
     }
     return self;
@@ -58,17 +62,31 @@ static const CGFloat kAvatarImageSize = 40.0f;       //头像大小
         }];
     }
     
+    CGSize size = [REMessageBubbleView calculateCellHeightWithMessage:self.message];
     if (self.message.messageType == REMessageTypeReceiving) {
         [self.avatorImage mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(ws.timesLable).with.offset(kLabelPadding+kTimeStampLabelHeight);
             make.left.equalTo(ws).with.mas_equalTo(kAvatorPaddingX);
             make.size.mas_equalTo(CGSizeMake(kAvatarImageSize, kAvatarImageSize));
         }];
+        
+        [self.bubbleView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(ws.avatorImage.mas_right);
+            //make.top.mas_equalTo(ws.timesLable.mas_bottom).with.offset(kLabelPadding);
+            make.top.mas_equalTo(ws.avatorImage.mas_top);
+            make.size.mas_equalTo(size);
+        }];
     }else{
         [self.avatorImage mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(ws.timesLable).with.offset(kLabelPadding);
+            make.top.mas_equalTo(ws.timesLable).with.offset(kLabelPadding+kTimeStampLabelHeight);
             make.right.equalTo(ws).with.mas_equalTo(-kAvatorPaddingX);
             make.size.mas_equalTo(CGSizeMake(kAvatarImageSize, kAvatarImageSize));
+        }];
+        
+        [self.bubbleView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(ws.avatorImage.mas_left);
+            make.top.mas_equalTo(ws.timesLable.mas_bottom).with.offset(kLabelPadding);
+            make.size.mas_equalTo(size);
         }];
     }
 }
@@ -76,8 +94,8 @@ static const CGFloat kAvatarImageSize = 40.0f;       //头像大小
 - (void)configureCellWithMessage:(id <REMessage>)message displaysTimestamp:(BOOL)displayTimestamp{
     //_messageBubbleView.userModel = self.userModel;
     [self configAvatorWithMessage:message];   //设置头像
-    //[self configureTimestamp:displayTimestamp atMessage:message];    //设置时间
-    //[self configureMessageBubbleViewWithMessage:message];      //设置内容
+    [self configureTimestamp:displayTimestamp atMessage:message];    //设置时间
+    [self configureMessageBubbleViewWithMessage:message];      //设置内容
 }
 
 /**
@@ -86,14 +104,34 @@ static const CGFloat kAvatarImageSize = 40.0f;       //头像大小
  *  @param message 需要配置的目标消息Model
  */
 - (void)configAvatorWithMessage:(id <REMessage>)message {
-//    if (message.bubbleMessageType == REBubbleMessageTypeSending) {
-//        NSString *headUrl = [NSString stringWithFormat:@"%@%@",kTUserHeaderImage,[(TeacherModel *)[NSString getUserModel] user_avater]];
-//        [self.avatorButton sd_setImageWithURL:[NSURL URLWithString:headUrl] placeholderImage:[UIImage imageNamed:kSenderUserImage]];
-//    }else {
-//        NSString *headUrl = [NSString stringWithFormat:@"%@%@",[NSString getUserHearderImage:[(TeacherModel *)self.userModel user_id]],[(TeacherModel *)self.userModel user_avater]];
-//        [self.avatorButton sd_setImageWithURL:[NSURL URLWithString:headUrl] placeholderImage:[UIImage imageNamed:kDefaultUserImage]];
-//    }
     [self.avatorImage setImage:[UIImage imageNamed:@"allClassIcon"]];
 }
+
+/**
+ *  是否显示时间的label
+ *
+ *  @param displayTimestamp 是否显示时间
+ *  @param message          需要配置的目标消息Model
+ */
+- (void)configureTimestamp:(BOOL)displayTimestamp atMessage:(id <REMessage>)message {
+    self.displayTimestamp = displayTimestamp;
+    self.timesLable.hidden = !self.displayTimestamp;
+    if (displayTimestamp) {
+        self.timesLable.text = [NSDateFormatter localizedStringFromDate:message.timestamp dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
+    }
+}
+
+/**
+ *  配置内容
+ *
+ *  @param message 消息的model
+ */
+- (void)configureMessageBubbleViewWithMessage:(id <REMessage>)message{
+    [self.bubbleView configureCellWithMessage:message];
+}
+
+//- (void)setSelectedBackgroundColor:(UIColor*)color{
+//    self.selectedBackgroundView.backgroundColor = color;
+//}
 
 @end

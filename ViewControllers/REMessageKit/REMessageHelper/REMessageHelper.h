@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 #include <UIKit/UIKit.h>
 
-#define MaxBubbleWidth [UIScreen mainScreen].bounds.size.width/2.0  //气泡最大宽度
-#define MinBubbleHeight 60.f                       //气泡最小高度
+#define MaxBubbleWidth [UIScreen mainScreen].bounds.size.width/2.0+45.0  //气泡最大宽度
+#define MinBubbleHeight 56.f                       //气泡最小高度
 
 typedef NS_ENUM(NSInteger, REMessageType) {
     /**

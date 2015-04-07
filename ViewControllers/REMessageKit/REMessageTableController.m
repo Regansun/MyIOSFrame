@@ -27,9 +27,21 @@ static NSString *const MessageTableViewCellIdentifier = @"MessageTableViewCellId
         textModel1.messageType = REMessageTypeReceiving;
         REMessageModel *textModel2 = [[REMessageModel alloc] initWithText:@"回复测试数据" receiver:@"123" timestamp:[NSDate date]];
         textModel2.messageType = REMessageTypeSending;
+        REMessageModel *textModel3 = [[REMessageModel alloc] initWithText:@"今天我们要去上海，你们去不去啊？" receiver:@"123" timestamp:[NSDate date]];
+        textModel3.messageType = REMessageTypeReceiving;
+        REMessageModel *textModel4 = [[REMessageModel alloc] initWithText:@"你们去吧，我们不去了，祝你们玩得愉快。" receiver:@"123" timestamp:[NSDate date]];
+        textModel4.messageType = REMessageTypeSending;
+        REMessageModel *textModel5 = [[REMessageModel alloc] initWithText:@"好的！" receiver:@"123" timestamp:[NSDate date]];
+        textModel5.messageType = REMessageTypeReceiving;
+        REMessageModel *textModel6 = [[REMessageModel alloc] initWithText:@"ok！" receiver:@"123" timestamp:[NSDate date]];
+        textModel6.messageType = REMessageTypeSending;
         
         [_messages addObject:textModel1];
         [_messages addObject:textModel2];
+        [_messages addObject:textModel3];
+        [_messages addObject:textModel4];
+        [_messages addObject:textModel5];
+        [_messages addObject:textModel6];
     }
     return _messages;
 }
@@ -77,15 +89,20 @@ static NSString *const MessageTableViewCellIdentifier = @"MessageTableViewCellId
     id <REMessage> message = [self messageForRowAtIndexPath:indexPath];
     BOOL displayTimestamp = YES;
     REMessageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MessageTableViewCellIdentifier];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (!cell) {
         cell = [[REMessageTableViewCell alloc] initWithMessage:message displaysTimestamp:displayTimestamp reuseIdentifier:MessageTableViewCellIdentifier];
         [cell setBackgroundColor:tableView.backgroundColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         //messageTableViewCell.delegate = self;
     }
     [cell configureCellWithMessage:message displaysTimestamp:displayTimestamp];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    REMessageTableViewCell *cell = (REMessageTableViewCell *)[self.messageTable cellForRowAtIndexPath:indexPath];
+//    [cell setSelectedBackgroundColor:[UIColor redColor]];
 }
 
 #pragma mark - Message Calculate Cell Height  计算cell的高度

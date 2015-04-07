@@ -42,7 +42,7 @@
 //NSUserDefaults 实例化
 #define USER_DEFAULT [NSUserDefaults standardUserDefaults]
 //方正黑体简体字体定义
-#define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1" size:F]
+#define FONT(F) [UIFont fontWithName:@"Helvetica" size:F]
 //获取图片
 #define LoginImage(name) [UIImage imageNamed:name]
 //NSUserDefaults 实例化
