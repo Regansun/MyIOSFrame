@@ -32,7 +32,7 @@
     [noticeLb_ mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ws.view).with.equalTo(@80);
         make.centerX.equalTo(ws.view);
-        make.size.mas_equalTo(CGSizeMake(300, 20));
+        make.size.mas_equalTo(CGSizeMake(KMainScreenWidth-20, 20));
     }];
     
     userName_ = [[UITextField alloc] init];
@@ -43,7 +43,7 @@
     [self.view addSubview:userName_];
     [userName_ mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ws.view).with.equalTo(@105);
-        make.size.mas_equalTo(CGSizeMake(320, 44));
+        make.size.mas_equalTo(CGSizeMake(KMainScreenWidth, 44));
     }];
     
     passWord_ = [[UITextField alloc] init];
@@ -55,7 +55,7 @@
     [self.view addSubview:passWord_];
     [passWord_ mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(userName_).with.equalTo(@45);
-        make.size.mas_equalTo(CGSizeMake(320, 44));
+        make.size.mas_equalTo(CGSizeMake(KMainScreenWidth, 44));
     }];
     
     for (int i = 0; i<3; i++) {
@@ -65,7 +65,7 @@
         
         [lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(ws.view).with.equalTo(@(104+45*i));
-            make.size.mas_equalTo(CGSizeMake(320, 1));
+            make.size.mas_equalTo(CGSizeMake(KMainScreenWidth, 1));
         }];
     }
 }

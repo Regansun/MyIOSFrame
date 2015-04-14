@@ -21,6 +21,8 @@
 
 @property (weak, nonatomic) RELable *textLable;     //文本
 
++ (UIFont *)setTextFont UI_APPEARANCE_SELECTOR;
+
 /**
  *  初始化
  *

@@ -14,6 +14,7 @@
 #import "AnimationViewController.h"
 #import "CustomViewController.h"
 #import "REMessageTableController.h"
+#import "GuidePageController.h"
 
 static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
@@ -27,7 +28,7 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
 
 - (NSMutableArray *)tableArray{
     if (!_tableArray) {
-        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"runtime学习",@"无限循环图片轮播器",@"动画学习",@"子视图切换",@"聊天界面实现"] mutableCopy];
+        _tableArray = [@[@"Masonry介绍与使用实践：快速上手Autolayout",@"引导页",@"无限循环图片轮播器",@"动画学习",@"子视图切换",@"聊天界面实现"] mutableCopy];
     }
     return _tableArray;
 }
@@ -83,7 +84,7 @@ static NSString *const TableViewCellIdentifier = @"TableViewCellIdentifier";
             viewCov = [[MasonryViewController alloc] init];
             break;
         case 1:
-            
+            viewCov = [[GuidePageController alloc] init];
             break;
         case 2:
             viewCov = [[CircleViewController alloc] init];
